@@ -48,7 +48,8 @@ public class ComposeActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // Fires right as the text is being changed (even supplies the range of text)
-
+                String tweet = etCompose.getText().toString();
+                tvCharCount.setText(Integer.toString(280 - tweet.length()));
             }
 
             @Override
